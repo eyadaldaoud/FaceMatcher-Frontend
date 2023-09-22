@@ -2,26 +2,81 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.button-coloring {
+    padding:0 1rem;
+    position: relative;
+    display:inline-flex;
+    border: none;
+    min-width: 120px;
+    min-height: 32px;
   }
+  
+  .button-text {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border-radius: 4px;
+      display: flex;
+      justify-content: center;
+      align-items: center
+  }
+  
+  .button-background {
+      position: absolute;
+      top: 1px;
+      right: 1px;
+      bottom: 1px;
+      left: 1px;
+      border-radius: 8px;
+      background: linear-gradient(-90deg, #007cf0, #00dfd8, #ff0080, #007cf0);
+      background-size: 400% 100%;
+      border: none;
+      padding: 0;
+      margin: 0;
+      animation: backgroundAnimation 8s ease-in-out infinite
+  }
+  
+  
+  @keyframes backgroundAnimation {
+      50% {
+          background-position: 140% 50%;
+          transform: skew(-2deg)
+      }
+  }
+  
+  .button-background:after {
+      content: "";
+      position: absolute;
+      background-size: inherit;
+      background-image: inherit;
+      -webkit-animation: inherit;
+      animation: inherit;
+      left: 0;
+      right: 0;
+      top: 2px;
+      height: 100%;
+      filter: blur(.5rem)
+  }
+
+
+  .text{
+  text-transform: uppercase; 
+  background-image: linear-gradient(to right, #007cf0, #00dfd8, #ff0080, #007cf0);
+  -webkit-background-clip: text; 
+  background-clip: text; 
+  color: transparent;
+  
+  background-size: 300%;
+  background-position: -100%;  
+  
+  animation: animatedText 5s infinite alternate-reverse;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@keyframes animatedText{
+  to{
+    background-position: 100%; 
+  }
 }
