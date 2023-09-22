@@ -22,7 +22,7 @@ const Infocard = () => {
         className="mr-auto ml-auto"
         isExternal
         showAnchorIcon
-        href="https://github.com/nextui-org/nextui"
+        href="https://github.com/UGoingNoWhereBoy/FaceMatcher-Frontend"
       >
         Visit source code on GitHub.
       </Link>
