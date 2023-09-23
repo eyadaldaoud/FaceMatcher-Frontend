@@ -54,7 +54,9 @@ export default function App() {
         </CardBody>
         <CardFooter className="gap-3">
           <div className="flex gap-1">
-           
+             <p className=" text-default-400 text-small">
+              Thanks for my teacher & trainer @QUSAI_OMAR
+            </p>
           </div>
         </CardFooter>
       </Card>
