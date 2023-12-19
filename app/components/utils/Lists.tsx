@@ -56,7 +56,7 @@ export const conatcts: contactsType[] = [
   },
   {
     name: "Facebook",
-    link: "https://web.facebook.com/UGoingNoWhereBoy/",
+    link: "https://web.facebook.com/ugnwb/",
     icon: <FaFacebook />,
   },
   { name: "Portfolio", link: "https://eyad.vercel.app/", icon: <SiVercel /> },
